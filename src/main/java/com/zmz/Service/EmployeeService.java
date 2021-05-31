@@ -18,4 +18,8 @@ public class EmployeeService {
     public List<Employee> getall() {
         return employeeMapper.selectByExampleWithdept(null);
     }
+
+    public int add(Employee employee) {
+       return employeeMapper.insert(employee);
+    }
 }

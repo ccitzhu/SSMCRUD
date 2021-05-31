@@ -28,8 +28,8 @@
 <%--    按钮--%>
     <div class="row">
         <div class="col-md-4 col-md-offset-8">
-            <button class="btn btn-primary">新增</button>
-            <button class="btn btn-danger">删除</button>
+            <a href=${app_path}/add><button class="btn btn-primary">新增</button></a>
+            <button class="btn btn-danger" href="${app_path}/delete">删除</button>
         </div>
     </div>
 <%--    显式表格数据--%>
