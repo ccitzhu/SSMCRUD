@@ -22,7 +22,7 @@ import java.util.List;
 public class EmpCon {
     @Autowired
     EmployeeService employeeService;
-    //导入Jackson包
+  /*  //导入Jackson包
     @RequestMapping("/emps")
     @ResponseBody
     public Message getEmps(@RequestParam(value = "pn",defaultValue = "1")Integer pn){
@@ -31,8 +31,8 @@ public class EmpCon {
 //        对查询出的结果进行包装，传入连续显式的页数
         PageInfo page=new PageInfo(employees,5);
         return Message.sucess().add("pageinfo",page);
-    }
-   // @RequestMapping("/emps")
+    }*/
+   @RequestMapping("/emps")
     public String getemp(Model model, @RequestParam(value = "pn",defaultValue = "1")Integer pn){
         PageHelper.startPage(pn,5);
         List<Employee> employees=employeeService.getall();
